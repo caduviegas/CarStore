@@ -9,6 +9,11 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
+androidxLifecycleVersion = "2.8.2"
+koin_version = "3.2.2"
+koin_android_version ="3.2.2"
+jetbrainsKotlinJvm = "1.9.0"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -18,9 +23,18 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "androidxLifecycleVersion"}
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycleVersion"}
+koin-core = {group = "io.insert-koin", name = "koin-core", version.ref ="koin_version"}
+koin-test = {group = "io.insert-koin", name = "koin-test", version.ref ="koin_version"}
+koin-android = {group = "io.insert-koin", name ="koin-android", version.ref ="koin_android_version"}
+koin-android-compat = {group = "io.insert-koin", name ="koin-android-compat", version.ref ="koin_android_version"}
+
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
