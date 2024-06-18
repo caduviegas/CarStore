@@ -13,6 +13,15 @@ androidxLifecycleVersion = "2.8.2"
 koin_version = "3.2.2"
 koin_android_version ="3.2.2"
 jetbrainsKotlinJvm = "1.9.0"
+coroutinesAndroidVerion = "1.6.4"
+coroutinesCoreVersion = "1.6.1"
+lottieVersion = '4.1.0'
+glideVersion = '4.16.0'
+koin_android_compose_version= "3.2.1"
+koin_ktor= "3.2.2"
+life_versions = "1.1.1"
+room_version = "2.4.0"
+gsonVersion = "2.9.0"
 
 
 [libraries]
@@ -29,6 +38,17 @@ koin-core = {group = "io.insert-koin", name = "koin-core", version.ref ="koin_ve
 koin-test = {group = "io.insert-koin", name = "koin-test", version.ref ="koin_version"}
 koin-android = {group = "io.insert-koin", name ="koin-android", version.ref ="koin_android_version"}
 koin-android-compat = {group = "io.insert-koin", name ="koin-android-compat", version.ref ="koin_android_version"}
+koin-navigation = {group = "io.insert-koin", name = "koin-androidx-navigation", version.ref = "koin_android_version"}
+koin-workmanage = { group = "io.insert-koin", name = "koin-androidx-workmanager", version.ref = "koin_android_version"}
+coroutines-android ={group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesAndroidVerion"}
+coroutines-core ={group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutinesCoreVersion"}
+lottie = {group = "com.airbnb.android", name = "lottie", version.ref = "lottieVersion"}
+room-runtime = {group = "androidx.room", name = "room-runtime", version.ref = "room_version"}
+room-compiler = {group = "androidx.room", name = "room-compiler", version.ref ="room_version"}
+room = {group = "androidx.room", name = "room-ktx", version.ref ="room_version"}
+gson = {group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion"}
+glide = {group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion"}
+glide-compiler = {group = "com.github.bumptech.glide", name = "compiler", version = "glideVersion"}
 
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 

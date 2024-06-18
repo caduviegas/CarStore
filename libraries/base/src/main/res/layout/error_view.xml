@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/red"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_l"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/error_view_message"
+        app:lottie_rawRes="@raw/error_animation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/error_view_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/error_view_try_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_xxl_5"
+        android:gravity="center"
+        android:text="@string/error_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_m"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/error_view_try_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_large"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_l"
+        android:background="@drawable/shape_rectangle_corner_solid"
+        android:gravity="center"
+        android:text="@string/try_again"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xs"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

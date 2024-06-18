@@ -25,3 +25,6 @@ include ':app'
 include ':feature:productdetail'
 
 include ':libraries:base'
+include ':libraries:datalayer'
+include ':libraries:database'
+include ':libraries:network'

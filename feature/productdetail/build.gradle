@@ -4,6 +4,9 @@ plugins {
 }
 
 android {
+    buildFeatures {
+        viewBinding true
+    }
     namespace 'com.benhurqs.productdetail'
     compileSdk 34
 
@@ -34,7 +37,21 @@ dependencies {
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.lifecycle
+    implementation libs.androidx.lifecycle.viewmodel
+    implementation libs.androidx.constraintlayout
+    implementation libs.koin.core
+    implementation libs.koin.android
+    implementation libs.koin.android.compat
+    implementation libs.lottie
+    implementation project(':libraries:base')
+
     testImplementation libs.junit
+    androidTestImplementation libs.koin.test
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+
+    implementation project(':libraries:datalayer')
+
 }
