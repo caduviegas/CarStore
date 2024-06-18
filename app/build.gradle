@@ -49,6 +49,7 @@ dependencies {
     implementation libs.koin.android
     implementation libs.koin.android.compat
     implementation project(':feature:productdetail')
+    implementation project(':libraries:datalayer')
 
     testImplementation libs.junit
     androidTestImplementation libs.koin.test

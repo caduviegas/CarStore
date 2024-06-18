@@ -20,14 +20,14 @@ class ProductDetailActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.fetchProduct(intent.getIntExtra(Actions.PRODUCT_ID_KEY, -1))
-        viewModel.status.observe(this){ status ->
-            when(status){
-                is ProductDetailActions.ShowError -> ErrorView.makeContent(this){
-                    this@ProductDetailActivity.finish()
-                }.show()
-                is ProductDetailActions.LoadProduct -> loadProduct(status.product)
-            }
-        }
+//        viewModel.status.observe(this){ status ->
+//            when(status){
+//                is ProductDetailActions.ShowError -> ErrorView.makeContent(this){
+//                    this@ProductDetailActivity.finish()
+//                }.show()
+//                is ProductDetailActions.LoadProduct -> loadProduct(status.product)
+//            }
+//        }
 
         binding.productDetailClose.setOnClickListener { this.finish() }
         binding.productDetailCartButton.setOnClickListener {
