@@ -20,15 +20,15 @@ class ProductDetailViewModel(  private val repository: ProductsRepository
     fun fetchProduct(id: Int){
         viewModelScope.launch {
             try {
-                repository.getProductDetail(id).flowOn(Dispatchers.IO)
+                repository.getProductList().flowOn(Dispatchers.IO)
                     .catch {
                         _status.postValue(ProductDetailActions.ShowError)
                     }.collect { product ->
-                        if(product != null) {
-                            _status.postValue(ProductDetailActions.LoadProduct(product))
-                        }else{
-                            _status.postValue(ProductDetailActions.ShowError)
-                        }
+//                        if(product != null) {
+//                            _status.postValue(ProductDetailActions.LoadProduct(product))
+//                        }else{
+//                            _status.postValue(ProductDetailActions.ShowError)
+//                        }
                     }
             }catch (e: SocketTimeoutException){
                 _status.postValue(ProductDetailActions.ShowError)
